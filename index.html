@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="en" class="lang-en">
+<head>
+<meta charset="utf-8">
+<title>Altynay Turekhanova — Portfolio</title>
+<meta name="description" content="Altynay Turekhanova — Software Engineering student at IITU. Achievements, AI-generated architecture, characters, objects and motion.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta property="og:title" content="Altynay Turekhanova — Portfolio">
+<meta property="og:description" content="Software engineer & AI creator. Achievements and AI works: characters, objects, motion.">
+<meta property="og:image" content="media/me/portrait.jpg">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Cdefs%3E%3ClinearGradient id='g' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ff5fa2'/%3E%3Cstop offset='1' stop-color='%237c4dff'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='64' height='64' rx='18' fill='url(%23g)'/%3E%3Ctext x='32' y='44' font-size='36' font-family='Arial' font-weight='700' text-anchor='middle' fill='white'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#12072b; --bg2:#1d0e47; --ink:#f4f0ff; --muted:#b6a9dc; --line:rgba(255,255,255,.12);
+  --card:rgba(255,255,255,.06); --pink:#ff5fa2; --violet:#7c4dff;
+  --grad:linear-gradient(135deg,#ff5fa2,#7c4dff);
+  --radius:22px; --maxw:1240px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+html.lang-en .ru{display:none!important}
+html.lang-ru .en{display:none!important}
+body{font-family:'Manrope',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;color:var(--ink);line-height:1.6;
+  background-color:#12072b;
+  background-image:radial-gradient(1200px 700px at 85% 0,#3a1a8a 0%,transparent 60%),radial-gradient(900px 700px at 0 900px,#2a1070 0%,transparent 55%),radial-gradient(1000px 700px at 100% 2600px,#2c1275 0%,transparent 60%),linear-gradient(180deg,#1d0e47,#12072b 30%,#0d0520);
+  background-repeat:no-repeat,no-repeat,no-repeat,no-repeat;-webkit-font-smoothing:antialiased}
+img,video{display:block;max-width:100%}
+a{color:inherit}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+
+/* header */
+header.top{position:sticky;top:0;z-index:50;backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);background:rgba(18,7,43,.55);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;height:76px;gap:16px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-weight:800;font-size:22px;letter-spacing:-.02em}
+.logo i{width:38px;height:38px;border-radius:12px;background:var(--grad);display:grid;place-items:center;font-style:normal;font-size:20px;box-shadow:0 6px 20px rgba(124,77,255,.45)}
+nav.menu{display:flex;align-items:center;gap:4px}
+nav.menu a{padding:9px 16px;border-radius:999px;text-decoration:none;color:var(--muted);font-weight:600;font-size:15px;transition:.2s}
+nav.menu a:hover{color:#fff}
+nav.menu a.active{background:var(--grad);color:#fff;box-shadow:0 6px 20px rgba(255,95,162,.3)}
+.langs{display:flex;gap:2px;padding:3px;border:1px solid var(--line);border-radius:999px;margin-left:10px}
+.langs button{background:none;border:0;color:var(--muted);font:700 12px 'Manrope',sans-serif;padding:6px 11px;border-radius:999px;cursor:pointer}
+html.lang-en .langs [data-l=en],html.lang-ru .langs [data-l=ru]{background:rgba(255,255,255,.14);color:#fff}
+.burger{display:none;background:none;border:1px solid var(--line);color:#fff;border-radius:12px;width:42px;height:42px;font-size:20px;cursor:pointer}
+
+/* hero */
+.hero{padding:70px 0 40px}
+.hero .grid{display:grid;grid-template-columns:1.15fr .85fr;gap:56px;align-items:center}
+.eyebrow{display:inline-block;color:var(--pink);font-weight:700;font-size:13px;letter-spacing:.16em;text-transform:uppercase;margin-bottom:18px}
+h1{font-size:clamp(38px,5.4vw,68px);line-height:1.04;letter-spacing:-.035em;font-weight:800}
+h1 em{font-style:normal;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.lead{margin-top:22px;font-size:19px;color:var(--muted);max-width:56ch}
+.btns{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.btn{display:inline-block;padding:14px 26px;border-radius:999px;font-weight:700;text-decoration:none;font-size:15px;transition:.2s}
+.btn.primary{background:var(--grad);box-shadow:0 10px 30px rgba(124,77,255,.4)}
+.btn.primary:hover{transform:translateY(-2px)}
+.btn.ghost{border:1px solid var(--line);background:var(--card)}
+.btn.ghost:hover{background:rgba(255,255,255,.12)}
+.portrait{position:relative;border-radius:30px;overflow:hidden;aspect-ratio:4/5;box-shadow:0 30px 80px rgba(0,0,0,.5);border:1px solid var(--line)}
+.portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.portrait::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(18,7,43,.7))}
+.portrait .tag{position:absolute;left:18px;bottom:18px;z-index:2;background:rgba(18,7,43,.65);backdrop-filter:blur(10px);padding:10px 16px;border-radius:14px;font-weight:700;font-size:14px;border:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:54px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px 22px}
+.stat b{display:block;font-size:34px;font-weight:800;letter-spacing:-.03em;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.stat span{color:var(--muted);font-size:14px}
+
+/* sections */
+section{padding:84px 0 20px}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:12px}
+.sec-head .num{font-weight:800;color:var(--pink);font-size:15px;letter-spacing:.12em}
+h2{font-size:clamp(30px,4vw,48px);letter-spacing:-.03em;line-height:1.1;font-weight:800}
+.sec-sub{color:var(--muted);max-width:64ch;margin-bottom:34px;font-size:17px}
+h3{font-size:22px;letter-spacing:-.02em;margin-bottom:8px}
+
+/* about */
+.about-grid{display:grid;grid-template-columns:1.3fr 1fr;gap:28px}
+.panel{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:30px}
+.panel p{color:#d8cff5;margin-bottom:14px}
+.panel p:last-child{margin-bottom:0}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:18px}
+.chip{padding:7px 14px;border-radius:999px;border:1px solid var(--line);background:rgba(255,255,255,.05);font-size:13.5px;font-weight:600;color:#e6defc}
+.edu{padding:0;overflow:hidden;display:flex;flex-direction:column}
+.edu img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.edu .body{padding:26px 28px}
+.edu small{color:var(--pink);font-weight:700;letter-spacing:.1em;text-transform:uppercase;font-size:12px}
+.edu h3{margin:6px 0 4px}
+.edu p{color:var(--muted);margin:0;font-size:15px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.fact{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:20px}
+.fact b{display:block;margin-bottom:4px;font-size:16px}
+.fact span{color:var(--muted);font-size:14.5px}
+
+/* achievements */
+.ach{display:grid;grid-template-columns:1fr 1.1fr;gap:28px;margin-bottom:28px;align-items:stretch}
+.ach .info{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:32px;display:flex;flex-direction:column}
+.badge{align-self:flex-start;background:var(--grad);padding:6px 14px;border-radius:999px;font-weight:800;font-size:12.5px;letter-spacing:.06em;margin-bottom:16px}
+.ach .info p{color:#d8cff5;margin-top:10px}
+.ach .info ul{margin:14px 0 0 18px;color:#d8cff5}
+.ach .info li{margin-bottom:6px}
+.ach .shots{display:grid;grid-template-columns:repeat(6,1fr);gap:12px}
+.shot{border-radius:18px;overflow:hidden;position:relative;cursor:zoom-in;border:1px solid var(--line);background:#000}
+.shot img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.shot:hover img{transform:scale(1.05)}
+.s-a{grid-column:span 4;aspect-ratio:16/10}
+.s-b{grid-column:span 2;aspect-ratio:3/4}
+.s-c{grid-column:span 3;aspect-ratio:1/1}
+.s-t{grid-column:span 2;aspect-ratio:3/4}
+.certs{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.cert{border-radius:16px;overflow:hidden;border:1px solid var(--line);cursor:zoom-in;background:#fff}
+.cert img{width:100%;aspect-ratio:1.414/1;object-fit:cover;transition:transform .4s}
+.cert:hover img{transform:scale(1.04)}
+.cert-cap{font-size:13px;color:var(--muted);padding:10px 4px 0}
+.cert-cap b{color:#fff;display:block;font-size:14px}
+.cert-item{display:flex;flex-direction:column}
+
+/* work */
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:26px}
+.filters button{background:var(--card);border:1px solid var(--line);color:var(--muted);font:700 14px 'Manrope',sans-serif;padding:10px 20px;border-radius:999px;cursor:pointer;transition:.2s}
+.filters button:hover{color:#fff}
+.filters button.on{background:var(--grad);color:#fff;border-color:transparent}
+.masonry{columns:4 260px;column-gap:18px}
+.tile{break-inside:avoid;margin-bottom:18px;border-radius:24px;overflow:hidden;position:relative;cursor:zoom-in;border:1px solid var(--line);background:#1b0d3f}
+.tile img{width:100%;height:auto;transition:transform .6s}
+.tile:hover img{transform:scale(1.04)}
+.cap{position:absolute;left:12px;right:12px;bottom:12px;background:rgba(14,6,34,.72);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);padding:11px 16px;border-radius:14px;font-weight:700;font-size:14px;opacity:0;transform:translateY(8px);transition:.25s;border:1px solid var(--line)}
+.tile:hover .cap,.tile:focus-visible .cap{opacity:1;transform:none}
+.tile.hide{display:none}
+.tool-note{margin-top:18px;color:var(--muted);font-size:14px}
+
+/* motion */
+.motion{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.vcard{position:relative;border-radius:26px;overflow:hidden;border:1px solid var(--line);aspect-ratio:832/1120;cursor:pointer;background:#000;box-shadow:0 24px 60px rgba(0,0,0,.4)}
+.vcard video{width:100%;height:100%;object-fit:cover}
+.vcard .cap{opacity:1;transform:none}
+.vcard .play{position:absolute;top:14px;right:14px;width:44px;height:44px;border-radius:50%;background:rgba(14,6,34,.6);backdrop-filter:blur(10px);display:grid;place-items:center;border:1px solid var(--line);font-size:15px}
+.vcard:hover{border-color:rgba(255,95,162,.6)}
+
+/* contact / footer */
+.contact{margin-top:70px;border-radius:30px;padding:56px;background:linear-gradient(135deg,rgba(255,95,162,.18),rgba(124,77,255,.25));border:1px solid var(--line);text-align:center}
+.contact h2{margin-bottom:12px}
+.contact p{color:var(--muted);margin-bottom:26px}
+footer{padding:40px 0 50px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid var(--line);padding-top:26px}
+
+/* lightbox */
+.lb{position:fixed;inset:0;z-index:100;background:rgba(8,3,22,.92);backdrop-filter:blur(8px);display:none;align-items:center;justify-content:center;padding:30px}
+.lb.open{display:flex}
+.lb .stage{max-width:min(92vw,1300px);max-height:88vh;display:flex;flex-direction:column;align-items:center;gap:14px}
+.lb img,.lb video{max-width:100%;max-height:80vh;border-radius:18px;box-shadow:0 30px 90px rgba(0,0,0,.6);object-fit:contain}
+.lb .lbcap{color:var(--muted);font-weight:600}
+.lb button{position:absolute;background:rgba(255,255,255,.1);border:1px solid var(--line);color:#fff;width:50px;height:50px;border-radius:50%;font-size:22px;cursor:pointer}
+.lb button:hover{background:rgba(255,255,255,.2)}
+.lb .x{top:22px;right:24px}.lb .prev{left:22px;top:50%}.lb .next{right:22px;top:50%}
+
+@media (max-width:980px){
+  .hero .grid,.about-grid,.ach{grid-template-columns:1fr}
+  .portrait{max-width:440px;aspect-ratio:1/1}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .facts{grid-template-columns:1fr}
+  .certs{grid-template-columns:repeat(2,1fr)}
+  .motion{grid-template-columns:1fr 1fr}
+  nav.menu{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;align-items:stretch;background:rgba(18,7,43,.96);padding:14px 20px 20px;border-bottom:1px solid var(--line)}
+  nav.menu.open{display:flex}
+  nav.menu a{padding:13px 16px}
+  .burger{display:block}
+  .langs{margin:8px 0 0;align-self:flex-start}
+}
+@media (max-width:600px){
+  .wrap{padding:0 18px}
+  .motion{grid-template-columns:1fr}
+  .masonry{columns:2 140px;column-gap:12px}
+  .tile{margin-bottom:12px;border-radius:18px}
+  .contact{padding:36px 22px}
+  .ach .shots{grid-template-columns:repeat(2,1fr)}
+  .s-a,.s-b,.s-c,.s-t{grid-column:span 1;aspect-ratio:1/1}
+  .s-a{grid-column:span 2;aspect-ratio:16/10}
+  .cap{opacity:1;transform:none;font-size:12px;padding:8px 12px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+<body id="top">
+
+<header class="top">
+  <div class="wrap">
+    <a class="logo" href="#top"><i>A</i><span>Altynay</span></a>
+    <button class="burger" aria-label="Menu" id="burger">☰</button>
+    <nav class="menu" id="menu">
+      <a href="#about" data-sec="about"><span class="en">About</span><span class="ru">Обо мне</span></a>
+      <a href="#achievements" data-sec="achievements"><span class="en">Achievements</span><span class="ru">Достижения</span></a>
+      <a href="#works" data-sec="works"><span class="en">Work</span><span class="ru">Работы</span></a>
+      <a href="#motion" data-sec="motion"><span class="en">Motion</span><span class="ru">Видео</span></a>
+      <a href="#contact" data-sec="contact"><span class="en">Contact</span><span class="ru">Контакты</span></a>
+      <div class="langs"><button data-l="en">EN</button><button data-l="ru">RU</button></div>
+    </nav>
+  </div>
+</header>
+
+<main>
+<!-- HERO -->
+<div class="wrap hero">
+  <div class="grid">
+    <div>
+      <span class="eyebrow">Portfolio · Altynay Turekhanova</span>
+      <h1>
+        <span class="en">I build software and turn ideas into <em>AI visuals</em>.</span>
+        <span class="ru">Пишу софт и превращаю идеи в <em>AI-визуал</em>.</span>
+      </h1>
+      <p class="lead">
+        <span class="en">4th-year Software Engineering student at IITU, 3rd place at QueenCodes 2025 and a hackathon team lead. Below: who I am, what I've achieved, and the AI work I create — characters, objects and motion.</span>
+        <span class="ru">Студентка 4 курса Software Engineering в IITU, 3 место на QueenCodes 2025, тимлид на хакатоне. Ниже: кто я, чего достигла и мои AI-работы — персонажи, объекты и видео.</span>
+      </p>
+      <div class="btns">
+        <a class="btn primary" href="#works"><span class="en">See the work</span><span class="ru">Смотреть работы</span></a>
+        <a class="btn ghost" href="#about"><span class="en">About me</span><span class="ru">Обо мне</span></a>
+      </div>
+    </div>
+    <div class="portrait">
+      <img src="media/me/portrait.jpg" alt="Portrait of Altynay Turekhanova" fetchpriority="high">
+      <div class="tag">Altynay Turekhanova · Almaty</div>
+    </div>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>3rd</b><span class="en">place, QueenCodes 2025</span><span class="ru">место, QueenCodes 2025</span></div>
+    <div class="stat"><b>48 h</b><span class="en">hackathon, pitched in English</span><span class="ru">хакатон, питч на английском</span></div>
+    <div class="stat"><b>5</b><span class="en">Coursera certificates</span><span class="ru">сертификатов Coursera</span></div>
+    <div class="stat"><b>3</b><span class="en">AI motion videos</span><span class="ru">AI-видео</span></div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about"><div class="wrap">
+  <div class="sec-head"><span class="num">01</span><h2><span class="en">About me</span><span class="ru">Обо мне</span></h2></div>
+  <p class="sec-sub"><span class="en">Who I am and what I'm working towards.</span><span class="ru">Кто я и к чему иду.</span></p>
+  <div class="about-grid">
+    <div class="panel">
+      <p class="en">I'm a 4th-year Software Engineering student at the International Information Technology University. For me, student years are not only about studying — they're a time to test my abilities, explore new directions and grow as a professional.</p>
+      <p class="ru">Я студентка 4 курса Software Engineering в Международном университете информационных технологий. Для меня студенческие годы — не только учёба, а время проверять свои силы, пробовать новые направления и формироваться как специалист.</p>
+      <p class="en">Alongside programming, I've gained hands-on experience in software testing, project work and teamwork. My main goal is to combine knowledge with real practice and build useful solutions with technology. Lately I've also been exploring generative AI as a creative tool.</p>
+      <p class="ru">Помимо программирования, я набиралась опыта в тестировании ПО, проектной работе и командном взаимодействии. Моя цель — соединять знания с практикой и создавать полезные технологические решения. Сейчас я ещё и исследую генеративный AI как творческий инструмент.</p>
+      <div class="chips">
+        <span class="chip">Software development</span><span class="chip">Web / Frontend</span><span class="chip">QA &amp; testing</span>
+        <span class="chip">Algorithms</span><span class="chip">Python</span><span class="chip">AI / ML</span><span class="chip">Project work</span><span class="chip">Generative AI</span>
+      </div>
+    </div>
+    <div class="panel edu">
+      <img src="media/me/iitu.jpg" alt="IITU university building" loading="lazy">
+      <div class="body">
+        <small class="en">Education</small><small class="ru">Образование</small>
+        <h3>International Information Technology University (IITU)</h3>
+        <p>Software Engineering · <span class="en">4th year</span><span class="ru">4 курс</span> · 2023–2027 · Almaty</p>
+      </div>
+    </div>
+  </div>
+  <div class="facts">
+    <div class="fact"><b>QA Intern · Head of Department</b><span>Genius</span></div>
+    <div class="fact"><b><span class="en">Competitive programming</span><span class="ru">Спортивное программирование</span></b><span>Python, Java</span></div>
+    <div class="fact"><b><span class="en">Leadership</span><span class="ru">Лидерство</span></b><span class="en">Hackathon team lead, public speaking in English</span><span class="ru">Тимлид на хакатоне, выступления на английском</span></div>
+  </div>
+</div></section>
+
+<!-- ACHIEVEMENTS -->
+<section id="achievements"><div class="wrap">
+  <div class="sec-head"><span class="num">02</span><h2><span class="en">Achievements</span><span class="ru">Достижения</span></h2></div>
+  <p class="sec-sub"><span class="en">Competitions, hackathons and certificates. Click any photo to enlarge.</span><span class="ru">Соревнования, хакатоны и сертификаты. Нажмите на фото, чтобы увеличить.</span></p>
+
+  <div class="ach">
+    <div class="info">
+      <span class="badge">3rd PLACE · 2025</span>
+      <h3>QueenCodes Competitive Programming Contest</h3>
+      <p class="en">In 2025 I took 3rd place at the national QueenCodes contest, competing with strong programmers from leading universities in Kazakhstan. I solved complex algorithmic problems in Python and Java under time pressure.</p>
+      <p class="ru">В 2025 году заняла 3 место на республиканском QueenCodes, соревнуясь с сильными программистами ведущих вузов Казахстана. Решала сложные алгоритмические задачи на Python и Java в условиях ограниченного времени.</p>
+      <ul>
+        <li class="en">Certificate of Achievement, SDU · 15 March 2025 · prize 40,000 KZT</li>
+        <li class="ru">Certificate of Achievement, SDU · 15 марта 2025 · приз 40 000 ₸</li>
+        <li class="en">Skills: efficient code, fast decisions, systematic problem solving</li>
+        <li class="ru">Навыки: оптимальный код, быстрые решения, системный подход к задачам</li>
+      </ul>
+    </div>
+    <div class="shots">
+      <div class="shot s-a" data-lb="media/me/queencodes-cert.jpg" data-cap="QueenCodes — Certificate of Achievement"><img src="media/me/queencodes-cert.jpg" alt="QueenCodes certificate of achievement, 3rd place" loading="lazy"></div>
+      <div class="shot s-b" data-lb="media/me/queencodes-me.jpg" data-cap="QueenCodes 2025"><img src="media/me/queencodes-me.jpg" alt="Altynay holding the QueenCodes certificate" loading="lazy"></div>
+      <div class="shot s-c" data-lb="media/me/queencodes-badge.jpg" data-cap="QueenCodes participant badge"><img src="media/me/queencodes-badge.jpg" alt="QueenCodes participant badge" loading="lazy"></div>
+      <div class="shot s-c" data-lb="media/me/queencodes-flatlay.jpg" data-cap="QueenCodes prizes"><img src="media/me/queencodes-flatlay.jpg" alt="QueenCodes certificate and prizes" loading="lazy"></div>
+    </div>
+  </div>
+
+  <div class="ach">
+    <div class="info">
+      <span class="badge">TEAM LEAD · 2025</span>
+      <h3>Empower Me Hackathon</h3>
+      <p class="en">We designed a smart-glasses concept to help visually impaired people. As team lead I shaped the idea, coordinated the team and presented the project to an international jury in English within 48 hours.</p>
+      <p class="ru">Мы разработали концепцию умных очков для людей с нарушением зрения. Как тимлид, я формировала идею, координировала команду и за 48 часов представила проект международному жюри на английском языке.</p>
+      <ul>
+        <li class="en">Skills: leadership, public speaking, socially meaningful tech</li>
+        <li class="ru">Навыки: лидерство, публичные выступления, технологии с социальным смыслом</li>
+      </ul>
+    </div>
+    <div class="shots">
+      <div class="shot s-t" data-lb="media/me/empower-stage.jpg" data-cap="Empower Me Hackathon"><img src="media/me/empower-stage.jpg" alt="Altynay with a teammate at the Empower Me Hackathon" loading="lazy" style="object-position:50% 40%"></div>
+      <div class="shot s-t" data-lb="media/me/empower-cert.jpg" data-cap="Empower Me Hackathon — certificate"><img src="media/me/empower-cert.jpg" alt="Empower Me Hackathon participation certificate" loading="lazy"></div>
+      <div class="shot s-t" data-lb="media/me/empower-hall.jpg" data-cap="Empower Me Hackathon — presentation"><img src="media/me/empower-hall.jpg" alt="Presentation hall at the Empower Me Hackathon" loading="lazy"></div>
+    </div>
+  </div>
+
+  <h3 style="margin:38px 0 16px"><span class="en">Certificates</span><span class="ru">Сертификаты</span></h3>
+  <div class="certs">
+    <div class="cert-item"><div class="cert" data-lb="media/certs/uw-programming-languages.jpg" data-cap="Programming Languages, Part A — University of Washington"><img src="media/certs/uw-programming-languages.jpg" alt="Coursera certificate: Programming Languages, Part A" loading="lazy"></div><div class="cert-cap"><b>Programming Languages, Part A</b>University of Washington</div></div>
+    <div class="cert-item"><div class="cert" data-lb="media/certs/ucsd-data-structures.jpg" data-cap="Data Structures — UC San Diego"><img src="media/certs/ucsd-data-structures.jpg" alt="Coursera certificate: Data Structures" loading="lazy"></div><div class="cert-cap"><b>Data Structures</b>UC San Diego</div></div>
+    <div class="cert-item"><div class="cert" data-lb="media/certs/ucsd-algorithmic-toolbox.jpg" data-cap="Algorithmic Toolbox — UC San Diego"><img src="media/certs/ucsd-algorithmic-toolbox.jpg" alt="Coursera certificate: Algorithmic Toolbox" loading="lazy"></div><div class="cert-cap"><b>Algorithmic Toolbox</b>UC San Diego</div></div>
+    <div class="cert-item"><div class="cert" data-lb="media/certs/deeplearning-ai-for-everyone.jpg" data-cap="AI for Everyone — DeepLearning.AI"><img src="media/certs/deeplearning-ai-for-everyone.jpg" alt="Coursera certificate: AI for Everyone" loading="lazy"></div><div class="cert-cap"><b>AI for Everyone</b>DeepLearning.AI</div></div>
+    <div class="cert-item"><div class="cert" data-lb="media/certs/vanderbilt-prompt-engineering.jpg" data-cap="Prompt Engineering for ChatGPT — Vanderbilt University"><img src="media/certs/vanderbilt-prompt-engineering.jpg" alt="Coursera certificate: Prompt Engineering for ChatGPT" loading="lazy"></div><div class="cert-cap"><b>Prompt Engineering for ChatGPT</b>Vanderbilt University</div></div>
+  </div>
+</div></section>
+
+<!-- WORKS -->
+<section id="works"><div class="wrap">
+  <div class="sec-head"><span class="num">03</span><h2><span class="en">Work</span><span class="ru">Работы</span></h2></div>
+  <p class="sec-sub"><span class="en">AI-generated visuals. Click a piece to open it full screen; use the arrows to browse the set.</span><span class="ru">AI-визуалы. Нажмите на работу, чтобы открыть на весь экран, стрелками можно листать.</span></p>
+  <div class="filters" id="filters"></div>
+  <div class="masonry" id="gallery"></div>
+  <p class="tool-note"><span class="en">Images generated with Gemini.</span><span class="ru">Изображения созданы в Gemini.</span></p>
+</div></section>
+
+<!-- MOTION -->
+<section id="motion"><div class="wrap">
+  <div class="sec-head"><span class="num">04</span><h2>Motion</h2></div>
+  <p class="sec-sub"><span class="en">Short AI-generated videos. Click to watch full screen.</span><span class="ru">Короткие AI-видео. Нажмите, чтобы смотреть на весь экран.</span></p>
+  <div class="motion" id="motionGrid"></div>
+  <p class="tool-note"><span class="en">Videos generated with Dreamina.</span><span class="ru">Видео созданы в Dreamina.</span></p>
+</div></section>
+
+<!-- CONTACT -->
+<section id="contact"><div class="wrap">
+  <div class="contact">
+    <h2><span class="en">Let's talk</span><span class="ru">Давайте общаться</span></h2>
+    <p><span class="en">Open to teams, hackathons and creative tech projects.</span><span class="ru">Открыта к командам, хакатонам и креативным tech-проектам.</span></p>
+    <a class="btn primary" href="mailto:altynaiturekhan27@gmail.com">altynaiturekhan27@gmail.com</a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>Altynay Turekhanova · 2026</span>
+  <span>IITU · Almaty</span>
+</div></footer>
+
+<div class="lb" id="lb" role="dialog" aria-modal="true">
+  <button class="x" id="lbx" aria-label="Close">✕</button>
+  <button class="prev" id="lbp" aria-label="Previous">‹</button>
+  <button class="next" id="lbn" aria-label="Next">›</button>
+  <div class="stage" id="lbstage"></div>
+</div>
+
+<script>
+/* ============ EDIT HERE: add new works ============
+   type: 'architecture' | 'characters' | 'objects'
+   Put the file into media/ai/ and add a line below. */
+const WORKS = [
+  // characters
+  {src:'media/ai/cloud.jpg',type:'characters',en:'Cloud Gardener',ru:'Облачный садовник'},
+  {src:'media/ai/moon.jpg',type:'characters',en:'Moon Keeper',ru:'Хранитель луны'},
+  {src:'media/ai/lantern.jpg',type:'characters',en:'Lantern Girl',ru:'Девочка с фонарём'},
+  {src:'media/ai/diver.jpg',type:'characters',en:'Little Diver',ru:'Маленький водолаз'},
+  {src:'media/ai/blue-hair.jpg',type:'characters',en:'Blue Cloud Hair',ru:'Голубые кудри'},
+  {src:'media/ai/glasses.jpg',type:'characters',en:'Green Glasses',ru:'Зелёные очки'},
+  {src:'media/ai/teddy.jpg',type:'characters',en:'Soft Bear',ru:'Мягкий мишка'},
+  // objects
+  {src:'media/ai/glass-butterfly.jpg',type:'objects',en:'Chrome Butterfly',ru:'Хромовая бабочка'},
+  {src:'media/ai/jade-dragon.jpg',type:'objects',en:'Jade Dragon',ru:'Нефритовый дракон'},
+  {src:'media/ai/matcha.jpg',type:'objects',en:'Matcha Swirl',ru:'Матча-вихрь'},
+  {src:'media/ai/porcelain-vase.jpg',type:'objects',en:'Porcelain Bloom',ru:'Фарфоровый букет'},
+  {src:'media/ai/porcelain-butterfly.jpg',type:'objects',en:'Porcelain Butterfly',ru:'Фарфоровая бабочка'},
+  {src:'media/ai/glass-mushroom.jpg',type:'objects',en:'Glass Mushroom',ru:'Стеклянный гриб'},
+  {src:'media/ai/pink-flower.jpg',type:'objects',en:'Candy Blossom',ru:'Розовый цветок'},
+  // architecture — add here, e.g.:
+  // {src:'media/ai/house-1.jpg',type:'architecture',en:'Country house · Render',ru:'Загородный дом · Рендер'},
+];
+const VIDEOS = [
+  {src:'media/video/fairy.mp4',poster:'media/video/fairy.jpg',en:'Flower Fairy',ru:'Фея в розе'},
+  {src:'media/video/city.mp4',poster:'media/video/city.jpg',en:'City Walk',ru:'Прогулка по городу'},
+  {src:'media/video/snow.mp4',poster:'media/video/snow.jpg',en:'Snowboard Run',ru:'Спуск на сноуборде'},
+];
+const LABELS = {all:['All','Все'],architecture:['Architecture','Архитектура'],characters:['Characters','Персонажи'],objects:['Objects','Объекты']};
+/* =================================================== */
+
+const root=document.documentElement;
+const L=()=>root.classList.contains('lang-ru')?'ru':'en';
+
+/* language */
+function setLang(l){root.classList.remove('lang-en','lang-ru');root.classList.add('lang-'+l);root.lang=l;try{localStorage.setItem('lang',l)}catch(e){}renderFilters();renderCaps()}
+document.querySelectorAll('.langs button').forEach(b=>b.onclick=()=>setLang(b.dataset.l));
+try{const s=localStorage.getItem('lang');if(s==='ru'||s==='en'){root.classList.remove('lang-en');root.classList.add('lang-'+s);root.lang=s}}catch(e){}
+
+/* gallery */
+const gallery=document.getElementById('gallery'),filtersEl=document.getElementById('filters');
+let current='all';
+WORKS.forEach((w,i)=>{
+  const d=document.createElement('div');d.className='tile';d.tabIndex=0;d.dataset.type=w.type;
+  d.innerHTML=`<img src="${w.src}" alt="${w.en}" loading="lazy"><div class="cap"></div>`;
+  d.onclick=()=>openLB(visibleItems(),d);d.onkeydown=e=>{if(e.key==='Enter')d.click()};
+  d._item={kind:'img',src:w.src,w};gallery.appendChild(d);
+});
+function renderCaps(){gallery.querySelectorAll('.tile').forEach(t=>t.querySelector('.cap').textContent=t._item.w[L()]);
+  document.querySelectorAll('.vcard').forEach(v=>v.querySelector('.cap').textContent=v._item.v[L()])}
+function renderFilters(){
+  const types=['all',...['architecture','characters','objects'].filter(t=>WORKS.some(w=>w.type===t))];
+  filtersEl.innerHTML='';
+  types.forEach(t=>{const b=document.createElement('button');b.textContent=LABELS[t][L()==='ru'?1:0];if(t===current)b.className='on';
+    b.onclick=()=>{current=t;gallery.querySelectorAll('.tile').forEach(x=>x.classList.toggle('hide',t!=='all'&&x.dataset.type!==t));renderFilters()};filtersEl.appendChild(b)});
+}
+const visibleItems=()=>[...gallery.querySelectorAll('.tile:not(.hide)')];
+
+/* motion */
+const mg=document.getElementById('motionGrid');
+VIDEOS.forEach(v=>{
+  const c=document.createElement('div');c.className='vcard';
+  c.innerHTML=`<video src="${v.src}" poster="${v.poster}" muted loop playsinline preload="metadata"></video><div class="play">▶</div><div class="cap"></div>`;
+  c._item={kind:'video',src:v.src,poster:v.poster,v};c.onclick=()=>openLB([...mg.children],c);mg.appendChild(c);
+});
+const io=new IntersectionObserver(es=>es.forEach(e=>{const v=e.target.querySelector('video');if(e.isIntersecting){v.play().catch(()=>{})}else v.pause()}),{threshold:.35});
+document.querySelectorAll('.vcard').forEach(c=>io.observe(c));
+
+/* lightbox */
+const lb=document.getElementById('lb'),stage=document.getElementById('lbstage');
+let list=[],idx=0;
+function show(){
+  const el=list[idx];stage.innerHTML='';
+  if(el._item){const it=el._item;
+    if(it.kind==='video'){const v=document.createElement('video');v.src=it.src;v.poster=it.poster;v.controls=true;v.autoplay=true;v.loop=true;v.playsInline=true;stage.appendChild(v)}
+    else{const i=document.createElement('img');i.src=it.src;i.alt=it.w.en;stage.appendChild(i)}
+    const c=document.createElement('div');c.className='lbcap';c.textContent=(it.w||it.v)[L()];stage.appendChild(c);
+  }else{const i=document.createElement('img');i.src=el.dataset.lb;i.alt=el.dataset.cap;stage.appendChild(i);const c=document.createElement('div');c.className='lbcap';c.textContent=el.dataset.cap;stage.appendChild(c)}
+  const multi=list.length>1;lbp.style.display=lbn.style.display=multi?'':'none';
+}
+function openLB(l,el){list=l;idx=l.indexOf(el);lb.classList.add('open');document.body.style.overflow='hidden';show()}
+function closeLB(){lb.classList.remove('open');stage.innerHTML='';document.body.style.overflow=''}
+const lbp=document.getElementById('lbp'),lbn=document.getElementById('lbn');
+lbp.onclick=()=>{idx=(idx-1+list.length)%list.length;show()};lbn.onclick=()=>{idx=(idx+1)%list.length;show()};
+document.getElementById('lbx').onclick=closeLB;lb.onclick=e=>{if(e.target===lb||e.target===stage)closeLB()};
+document.addEventListener('keydown',e=>{if(!lb.classList.contains('open'))return;if(e.key==='Escape')closeLB();if(e.key==='ArrowLeft')lbp.click();if(e.key==='ArrowRight')lbn.click()});
+/* achievements photos & certs: group per block so arrows browse neighbours */
+document.querySelectorAll('.shots,.certs').forEach(g=>{const items=[...g.querySelectorAll('[data-lb]')];items.forEach(it=>it.onclick=()=>openLB(items,it))});
+
+/* nav */
+const links=[...document.querySelectorAll('nav.menu a')];
+const secs=links.map(a=>document.getElementById(a.dataset.sec));
+const so=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){links.forEach(a=>a.classList.toggle('active',a.dataset.sec===e.target.id))}}),{rootMargin:'-40% 0px -55% 0px'});
+secs.forEach(s=>s&&so.observe(s));
+const menu=document.getElementById('menu');document.getElementById('burger').onclick=()=>menu.classList.toggle('open');
+links.forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+renderFilters();renderCaps();
+</script>
+</body>
+</html>
